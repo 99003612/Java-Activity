@@ -1,13 +1,14 @@
+package java6;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class DisplayTeamMain {
 
-	public static void main(String[] args)throws Exception {
+	public static void main(String[] args) throws Exception {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the number of players..");
 		int no=Integer.parseInt(br.readLine());
@@ -26,14 +27,14 @@ public class DisplayTeamMain {
 			for(Team t:stteam) {
 			
 				if(t.getName().equals(teamname)) {
-						t.addPlayer1(playername);
+						t.addPlayer(playername);
 						b=true;
 				}
 			}
 			if(b==false) {
 			
 				Team t=new Team(teamname);
-				t.addPlayer1(playername);
+				t.addPlayer(playername);
 				stteam.add(t);
 			}
 			
@@ -41,7 +42,7 @@ public class DisplayTeamMain {
 		System.out.println("Team and Details");
 		for(Team t:stteam) {
 			System.out.println(t.getName());
-			List<Player> li=t.getPlayerList1();
+			List<Player> li=t.getPlayerList();
 			for(Player p:li) {
 				System.out.println("--"+p.getName());
 			}
