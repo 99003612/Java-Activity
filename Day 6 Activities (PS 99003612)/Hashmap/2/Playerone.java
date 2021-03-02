@@ -5,22 +5,31 @@ public class Playerone
 
 	
 	
+	public String getBowlername() {
+		return bowlername;
+	}
+
+	public void setBowlername(String bowlername) {
+		this.bowlername = bowlername;
+	}
+
+	public int getWicketCount() {
+		return wicketCount;
+	}
+
+	public void setWicketCount(int wicketCount) {
+		this.wicketCount = wicketCount;
+	}
+
 	public Playerone(String bowlername, int wicketCount) {
 		super();
 		this.bowlername = bowlername;
 		this.wicketCount = wicketCount;
 	}
 
-	public String getName() {
-		return bowlername;
-	}
-
-	public void setName(String bowlername) {
-		this.bowlername = bowlername;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Bowler [name=" + bowlername + "]";
+		return "Playerone [bowlername=" + bowlername + ", wicketCount=" + wicketCount + "]";
 	}
 }	
